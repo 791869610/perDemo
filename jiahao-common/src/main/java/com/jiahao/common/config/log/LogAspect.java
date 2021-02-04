@@ -23,7 +23,7 @@ public class LogAspect {
     /**
      * 线程副本类去记录各个线程的开始时间
      */
-    ThreadLocal<Long> startTime = new ThreadLocal<>();
+    ThreadLocal<Long> startTime = new ThreadLocal<Long>();
 
     /**
      * 定义切入点

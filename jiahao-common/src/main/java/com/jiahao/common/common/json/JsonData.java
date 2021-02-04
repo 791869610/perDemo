@@ -32,7 +32,7 @@ public class JsonData<T> {
     }
 
     public static <T> JsonData<T> ok(T data) {
-        return new JsonData<>(CODE_SUCCESS, msgSuccess, data);
+        return new JsonData<T>(CODE_SUCCESS, msgSuccess, data);
     }
 
 
@@ -40,7 +40,7 @@ public class JsonData<T> {
         if(isPage){
            //TODO
         }
-        return new JsonData<>(CODE_SUCCESS, msgSuccess, data);
+        return new JsonData<T>(CODE_SUCCESS, msgSuccess, (T)data);
     }
 
     public static JsonData ok() {
