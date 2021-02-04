@@ -5,8 +5,6 @@
 <!-- debug:当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值为false。 -->
 <configuration  scan="true" scanPeriod="10 seconds">
 
-    <!--<include resource="org/springframework/boot/logging/logback/base.xml" />-->
-
     <contextName>logback</contextName>
     <!-- name的值是变量的名称，value的值时变量定义的值。通过定义的值会被插入到logger上下文中。定义变量后，可以使“${}”来使用变量。 -->
     <property name="log.path" value="D:/nmyslog/nmys" />
@@ -22,10 +20,6 @@
 
     <!--输出到控制台-->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <!--此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息-->
-<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
-<!--            <level>debug</level>-->
-<!--        </filter>-->
         <encoder>
             <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
             <!-- 设置字符集 -->
@@ -34,14 +28,6 @@
     </appender>
 
     <logger name="com.jiahao.per_demo.core.mapper" level="debug"/>
-    <!--<logger name="org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor" level="INFO"/>-->
-
-    <!--myibatis log configure-->
-    <logger name="com.apache.ibatis" level="TRACE"/>
-    <logger name="java.sql.Connection" level="DEBUG"/>
-    <logger name="java.sql.Statement" level="DEBUG"/>
-    <logger name="java.sql.PreparedStatement" level="DEBUG"/>
-    <logger name="com.zaxxer.hikari.HikariDataSource" level="INFO"/>
 
     <root level="info">
         <appender-ref ref="CONSOLE" />

@@ -17,7 +17,7 @@ public class DemoController {
     private DemoService demoService;
 
     @GetMapping
-    private JsonData findNum(){
+    public JsonData findNum(){
         log.info("this is test");
         int num = demoService.findNum();
         return JsonData.ok(num);

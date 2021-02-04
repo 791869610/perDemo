@@ -81,8 +81,9 @@ public class LogAspect {
      */
     @AfterReturning(returning = "ret", pointcut = "weblog()")
     public void doafter(Object ret) {
-        log.info("|【RESPONSE】:" + ret);       // 响应的内容---方法的返回值responseEntity
-        log.info("|【SPEND】:{}s", (System.currentTimeMillis() - startTime.get()));
+        // 响应的内容---方法的返回值responseEntity
+        log.info("|【RESPONSE】:" + ret);
+        log.info("|【SPEND】:{}ms", (System.currentTimeMillis() - startTime.get()));
         log.info("|【结束调用】========================================：");
     }
 }

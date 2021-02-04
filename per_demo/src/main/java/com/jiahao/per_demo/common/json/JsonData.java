@@ -1,10 +1,8 @@
 package com.jiahao.per_demo.common.json;
 
-
-import lombok.Data;
-
 import java.util.List;
 
+import lombok.Data;
 
 @Data
 public class JsonData<T> {
@@ -37,26 +35,6 @@ public class JsonData<T> {
         return new JsonData<>(CODE_SUCCESS, msgSuccess, data);
     }
 
-//    public static <T> JsonData ok(List<T> big.data) {
-//        if (big.data instanceof Page) {
-//            Map<String, Object> map = new HashMap();
-//
-//            List<T> list = new ArrayList<T>();
-//            for (T object : big.data) {
-//                list.add(object);
-//            }
-//            map.put("list", list);
-//            PageInfo info = new PageInfo(big.data);
-//            map.put("total", info.getTotal());
-//            map.put("pages", info.getPages());
-//            map.put("size", info.getSize());
-//            map.put("pageSize", info.getPageSize());
-//            map.put("pageNum", info.getPageNum());
-//            return new JsonData(CODE_SUCCESS, msgSuccess, map);
-//        } else {
-//            return new JsonData(CODE_SUCCESS, msgSuccess, big.data);
-//        }
-//    }
 
     public static <T> JsonData ok(List<T> data,boolean isPage) {
         if(isPage){
@@ -68,14 +46,6 @@ public class JsonData<T> {
     public static JsonData ok() {
         return new JsonData(CODE_SUCCESS, msgSuccess);
     }
-
-//    public static JsonData error(ErrorCode errorCode) {
-//        return new JsonData(errorCode.getCode(), errorCode.getErrorMsg());
-//    }
-
-//    public static JsonData error() {
-//        return error(CommonErrorCode.INNER_ERROR);
-//    }
 
     public static JsonData error(Integer errorCode, String msg) {
         return new JsonData(errorCode, msg);
