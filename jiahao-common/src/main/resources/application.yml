@@ -55,6 +55,6 @@ mybatis:
     default-statement-timeout: 30
 mapper:
   mappers:
-    - com.jiahao.per_demo.config.mapper.MyBaseMapper
+    - com.jiahao.common.config.mapper.MyBaseMapper
   not-empty: false
   identity: mysql
