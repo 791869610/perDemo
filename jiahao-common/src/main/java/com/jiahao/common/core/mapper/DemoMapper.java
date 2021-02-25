@@ -9,5 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DemoMapper extends MyBaseMapper<Demo> {
 
+    void update(Demo demo);
     int selectNum();
 }
