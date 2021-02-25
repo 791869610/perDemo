@@ -46,17 +46,4 @@ public class test {
         String str = JSON.toJSONString(menus);
         System.out.println(str);
     }
-
-
-    //[
-    //    (id=1, pid=null, name=name1, children=[
-    //        (id=2, pid=1, name=name2, children=[
-    //            (id=4, pid=2, name=name4, children=[])]),
-    //    (id=3, pid=1, name=name3, children=[])]),
-    //    (id=5, pid=null, name=name5, children=[
-    //        (id=6, pid=5, name=name6, children=[])])]
-
-    //test a
-    //test b
-    //test c
 }
