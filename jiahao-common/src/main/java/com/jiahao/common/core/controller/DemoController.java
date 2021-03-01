@@ -1,6 +1,9 @@
 package com.jiahao.common.core.controller;
 
+import java.util.Date;
+
 import com.jiahao.common.common.json.JsonData;
+import com.jiahao.common.core.entity.Demo;
 import com.jiahao.common.core.service.DemoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,6 +26,18 @@ public class DemoController {
 
     @Autowired
     private DemoService demoService;
+
+    @GetMapping("/modify")
+    @ApiOperation("测试update mapper")
+    public JsonData modify(){
+        Demo demo = Demo.builder()
+            .id(1)
+            //.name("test")
+            //.createDate(new Date())
+            .build();
+        this.demoService.modify(demo);
+        return JsonData.ok();
+    }
 
     /**
      * findNum controller

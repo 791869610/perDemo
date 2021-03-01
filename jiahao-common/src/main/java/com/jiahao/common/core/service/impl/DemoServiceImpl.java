@@ -25,6 +25,11 @@ public class DemoServiceImpl implements DemoService {
     @Autowired
     private DemoMapper demoMapper;
 
+    @Override
+    public void modify(Demo demo) {
+        this.demoMapper.update(demo);
+    }
+
     /**
      * @description: findNum
      * @author: jiahao
