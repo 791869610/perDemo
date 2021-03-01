@@ -1,0 +1,9 @@
+# 基本模块
+### swagger
+### druid
+### mybatis-plus
+### logback
+###### 整合druid的日志到sl4j
+### event
+###### 两种监听方式
+###### 异步事件监听
