@@ -1,9 +1,11 @@
-package com.jiahao.common.core.test;
+package com.jiahao.training.test3;
+
+import com.jiahao.training.test4.IA;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class Test {
+public class ShowMeBug {
     public static void main(String[] arges) throws Exception {
         IA ia = (IA) createObject(IA.class.getName() + "$getName=Abc");
         System.out.println(ia.getName()); //输出Abc
@@ -31,5 +33,5 @@ public class Test {
                 }
         );
     }
-
 }
+

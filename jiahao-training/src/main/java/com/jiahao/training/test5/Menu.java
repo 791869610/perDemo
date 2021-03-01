@@ -1,10 +1,9 @@
-package com.jiahao.common.core.test;
+package com.jiahao.training.test5;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.annotation.JSONType;
 
 import lombok.Data;

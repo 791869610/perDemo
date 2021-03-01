@@ -15,6 +15,7 @@
 
     <modules>
         <module>jiahao-common</module>
+        <module>jiahao-training</module>
     </modules>
 
     <packaging>pom</packaging>

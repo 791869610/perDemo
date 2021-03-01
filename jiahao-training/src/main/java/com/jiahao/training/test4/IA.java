@@ -1,4 +1,4 @@
-package com.jiahao.common.core.test;
+package com.jiahao.training.test4;
 
 public interface IA {
     String getName();

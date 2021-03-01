@@ -1,4 +1,4 @@
-package com.jiahao.common.core.test2;
+package com.jiahao.training.test2;
 
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
