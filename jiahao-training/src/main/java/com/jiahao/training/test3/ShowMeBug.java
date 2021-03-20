@@ -25,11 +25,10 @@ public class ShowMeBug {
                 iaClass.getClassLoader(),
                 new Class[]{iaClass},
                 (Object proxy, Method method, Object[] args) -> {
-                    return method.getName().equals(arrayMethod[0])?arrayMethod[1]:null;
-//                    if (method.getName().equals(arrayMethod[0])) {
-//                        return arrayMethod[1];
-//                    }
-//                    return null;
+                    if (method.getName().equals(arrayMethod[0])) {
+                        return arrayMethod[1];
+                    }
+                    return null;
                 }
         );
     }
